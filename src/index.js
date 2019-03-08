@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-function Poster(props) {
+function Poster({info}) {
     return (
         <div className="container">
-            <Image image={props.info.poster2.image}/>
-            <Word word={props.info.poster2.word}/>
-            <Quote quote={props.info.poster2.quote}/>
+            <Image image={info.poster1.image}/>
+            <Word word={info.poster1.word}/>
+            <Quote quote={info.poster1.quote}/>
         </div>
     )
 }
@@ -23,10 +23,10 @@ const Image = (props) => {
     )
 }
 
-const Word = (props) => {
+const Word = ({word}) => {
     return (
         <div className="word">
-            {props.word}
+            {word}
         </div>
     )
 }
